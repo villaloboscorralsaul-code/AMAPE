@@ -1,284 +1,975 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-MX">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AMAPE — Sistema de Identidad 2026</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AMAPE · Consultoría en manufactura y proyectos especiales · Ciudad Juárez</title>
+<meta name="description" content="AMAPE, Asesores en Manufactura Avanzada y Proyectos Especiales. Consultoría integral para plantas de manufactura y maquiladoras: transferencias, nuevos productos, mejora continua, administración de proyectos, certificaciones ISO y talento. Ciudad Juárez, Chihuahua. Tel. +52 656 822 9302.">
+<meta name="theme-color" content="#00579B">
+<script>document.documentElement.classList.add('js')</script>
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="AMAPE">
+<meta property="og:title" content="AMAPE · Hacemos avanzar su manufactura">
+<meta property="og:description" content="Consultoría para que su planta crezca, mejore y cumpla. Base en Ciudad Juárez y más de 30 años de experiencia del equipo.">
+<meta property="og:image" content="assets/og-amape.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "AMAPE",
+  "alternateName": "Asesores en Manufactura Avanzada y Proyectos Especiales",
+  "description": "Consultoría integral de manufactura: transferencia de productos y procesos, introducción de nuevos productos, mejora continua, administración de proyectos, selección de personal, preparación para certificaciones ISO, desarrollo organizacional y entrenamiento a nuevos ingenieros.",
+  "telephone": "+52-656-822-9302",
+  "areaServed": "MX",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ciudad Juárez",
+    "addressRegion": "Chihuahua",
+    "addressCountry": "MX"
+  }
+}
+</script>
+
 <style>
 :root{
-  --azul:#00579B; --naranja:#F86A1B;
-  --papel:#F4F3F1; --blanco:#FFFFFF;
+  --azul:#00579B; --naranja:#F86A1B; --marino:#1B3A58;
+  --blanco:#FFFFFF; --papel:#F4F3F1;
   --tinta:#0E1013; --tinta2:#262A31; --tinta3:#4C525B;
-  --linea:#D9D7D3;
-  --max:1200px;
+  --linea:#D9D7D3; --linea-azul:#2E78B3;
+  --max:1200px; --gutter:clamp(20px,4vw,48px); --top:76px;
+  --display:Oswald,"Arial Narrow",Arial,sans-serif;
+  --texto:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
 }
-*{box-sizing:border-box}
-body{margin:0;background:var(--papel);color:var(--tinta);
-  font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;
-  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-img,video{max-width:100%;display:block}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--top) + 8px)}
+body{margin:0;background:var(--blanco);color:var(--tinta2);font-family:var(--texto);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;color:var(--tinta);margin:0;line-height:1.05;
+  text-transform:uppercase;letter-spacing:.005em}
+p{margin:0}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--gutter)}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--tinta);color:#fff;padding:10px 14px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--naranja);outline-offset:3px}
+.eyebrow{font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 
-.topbar{background:var(--blanco);border-bottom:1px solid var(--linea);
-  position:sticky;top:0;z-index:50}
-.topbar .wrap{display:flex;align-items:center;justify-content:space-between;
-  gap:24px;padding-top:14px;padding-bottom:14px;flex-wrap:wrap}
-.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.brand img{height:30px;width:auto}
-.brand span{font-family:Montserrat,sans-serif;font-weight:800;font-size:20px;
-  letter-spacing:.02em;color:var(--azul);line-height:1}
-.nav{display:flex;gap:26px;flex-wrap:wrap}
-.nav a{color:var(--tinta2);text-decoration:none;font-size:12.5px;font-weight:600;
-  letter-spacing:.12em;text-transform:uppercase}
-.nav a:hover{color:var(--azul)}
+/* ---------- Botones ---------- */
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--naranja);color:var(--tinta);font-weight:600;font-size:16px;
+  text-decoration:none;padding:16px 28px;border:0;cursor:pointer;font-family:var(--texto);line-height:1.2;transition:background .2s}
+.btn:hover{background:#FF7A2E}
+.btn-sec{display:inline-flex;align-items:center;gap:10px;background:transparent;color:var(--tinta);font-weight:600;font-size:16px;
+  text-decoration:none;padding:15px 26px;border:1px solid var(--tinta);line-height:1.2;transition:background .2s,color .2s}
+.btn-sec:hover{background:var(--tinta);color:var(--blanco)}
+.ico{width:20px;height:20px;flex:none}
 
-.hero{background:var(--azul);color:#fff;padding:96px 0 88px}
-.hero .eyebrow{font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;
-  letter-spacing:.22em;text-transform:uppercase;color:#fff;opacity:.85}
-.hero h1{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(38px,6.2vw,74px);
-  line-height:1.02;margin:20px 0 0;letter-spacing:-.015em;text-transform:uppercase}
-.rule{height:4px;width:120px;background:var(--naranja);margin:28px 0 24px;border:0}
-.hero p{font-size:19px;max-width:640px;color:#EAF1F8;margin:0}
-.hero .meta{margin-top:44px;display:flex;gap:48px;flex-wrap:wrap;
-  font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:#CFE0EF}
+/* ---------- Encabezado ---------- */
+.top{position:sticky;top:0;z-index:50;background:var(--blanco);border-bottom:1px solid transparent;transition:border-color .25s}
+.top.scrolled{border-bottom-color:var(--linea)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:var(--top)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:36px;width:auto}
+.brand span{font-family:var(--display);font-weight:600;font-size:30px;letter-spacing:.02em;color:var(--marino);line-height:1}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;color:var(--tinta2);padding:6px 0;
+  background:linear-gradient(var(--naranja),var(--naranja)) left bottom/0 2px no-repeat;transition:background-size .25s}
+.nav a:hover{background-size:100% 2px}
+.nav a.tel{color:var(--azul);font-weight:600;display:inline-flex;align-items:center;gap:8px}
+.nav a.cta{background:var(--naranja);color:var(--tinta);font-weight:600;padding:11px 20px}
+.nav a.cta:hover{background:#FF7A2E}
+.menu-btn{display:none;background:none;border:0;padding:10px;margin-right:-10px;cursor:pointer}
+.menu-btn i{display:block;width:24px;height:2px;background:var(--tinta);margin:5px 0;transition:transform .25s,opacity .25s}
+.menu-btn[aria-expanded="true"] i:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] i:nth-child(2){opacity:0}
+.menu-btn[aria-expanded="true"] i:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 
-section{padding:76px 0}
-section + section{border-top:1px solid var(--linea)}
-.shead{display:flex;align-items:baseline;gap:20px;margin-bottom:8px;flex-wrap:wrap}
-.num{font-family:Montserrat,sans-serif;font-weight:800;font-size:13px;color:var(--naranja);
-  letter-spacing:.18em}
-h2{font-family:Montserrat,sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);
-  margin:0;letter-spacing:-.01em;text-transform:uppercase;color:var(--azul)}
-.lede{font-size:17px;color:var(--tinta2);max-width:740px;margin:14px 0 40px}
+/* ---------- Hero ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);min-height:min(calc(100svh - var(--top)),760px)}
+.hero-copy{background:var(--azul);color:var(--blanco);display:flex;flex-direction:column;justify-content:center;
+  padding:clamp(56px,8vw,110px) var(--gutter) clamp(56px,7vw,96px) max(var(--gutter),calc((100vw - var(--max))/2 + var(--gutter)))}
+.hero .eyebrow{color:var(--blanco)}
+.hero h1{color:var(--blanco);font-size:clamp(44px,4.6vw,72px);margin-top:22px;overflow-wrap:anywhere}
+.hero .rule{display:block;height:5px;width:96px;background:var(--naranja);margin:34px 0 28px;transform-origin:left}
+.hero .lede{font-size:clamp(18px,1.7vw,21px);line-height:1.5;max-width:30em;color:var(--blanco)}
+.hero .acciones{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;margin-top:40px}
+.link-claro{color:var(--blanco);font-weight:500;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.55);padding-bottom:3px;
+  display:inline-flex;align-items:center;gap:8px}
+.link-claro:hover{border-bottom-color:var(--blanco)}
+.hero-media{position:relative;background:#1a1a1a;overflow:hidden}
+.hero-media video,.hero-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
-.grid{display:grid;gap:28px}
-.g2{grid-template-columns:repeat(2,1fr)}
-.g3{grid-template-columns:repeat(3,1fr)}
-figure{margin:0;background:var(--blanco);border:1px solid var(--linea)}
-figure img,figure video{width:100%;height:auto}
-figure video{aspect-ratio:16/9;object-fit:cover;background:#0E1013;pointer-events:none}
-figcaption{padding:14px 18px 16px;font-size:13.5px;color:var(--tinta2);
-  border-top:1px solid var(--linea)}
-figcaption b{display:block;font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;
-  letter-spacing:.13em;text-transform:uppercase;color:var(--azul);margin-bottom:5px}
+/* ---------- Credenciales ---------- */
+.creds{border-bottom:1px solid var(--linea)}
+.creds .wrap{display:grid;grid-template-columns:repeat(3,1fr)}
+.cred{padding:44px 32px 44px 0}
+.cred + .cred{padding-left:32px;border-left:1px solid var(--linea)}
+.cred b{display:block;font-family:var(--display);font-weight:600;font-size:clamp(30px,3.2vw,40px);color:var(--azul);text-transform:uppercase;line-height:1.05}
+.cred span{display:block;margin-top:10px;color:var(--tinta3);font-size:16px;max-width:22em}
 
-.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:34px}
-.sw{border:1px solid var(--linea);background:var(--blanco)}
-.sw .chip{height:118px}
-.sw .lbl{padding:13px 16px;font-size:12.5px}
-.sw .lbl b{display:block;font-family:Montserrat,sans-serif;font-weight:700;font-size:12px;
-  letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
-.sw .lbl span{color:var(--tinta3);font-variant-numeric:tabular-nums}
+/* ---------- Secciones ---------- */
+section{padding-block:clamp(80px,10vw,136px)}
+.shead{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:24px 64px;align-items:end;margin-bottom:clamp(44px,6vw,72px)}
+.num{display:block;font-family:var(--display);font-weight:500;font-size:16px;letter-spacing:.06em;color:var(--naranja);margin-bottom:16px}
+h2{font-size:clamp(38px,5vw,64px)}
+.lede-s{font-size:clamp(18px,1.6vw,20px);color:var(--tinta2);max-width:34em}
 
-.nota{background:var(--blanco);border:1px solid var(--linea);
-  border-left:4px solid var(--naranja);padding:22px 26px;margin-top:40px}
-.nota h3{font-family:Montserrat,sans-serif;font-weight:700;font-size:13px;letter-spacing:.13em;
-  text-transform:uppercase;margin:0 0 12px;color:var(--tinta)}
-.nota ul{margin:0;padding-left:20px}
-.nota li{margin-bottom:9px;color:var(--tinta2);font-size:15.5px}
-.nota li:last-child{margin-bottom:0}
+/* Riesgos */
+.riesgos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:40px 36px}
+.riesgo{border-top:3px solid var(--tinta);padding-top:28px}
+.riesgo h3{font-size:clamp(24px,2.2vw,30px)}
+.riesgo p{margin-top:14px;color:var(--tinta3);max-width:24em}
+.riesgos-pie{margin-top:clamp(40px,5vw,56px);font-size:clamp(20px,2vw,24px);color:var(--tinta);font-weight:500;max-width:36em}
+.riesgos-pie b{color:var(--azul);font-weight:600}
 
-.cierre{background:var(--azul);color:#fff;padding:84px 0}
-.cierre h2{color:#fff}
-.cierre p{color:#DCE8F3;font-size:17px;max-width:620px}
-footer{background:var(--blanco);border-top:1px solid var(--linea);padding:26px 0;
-  font-size:12.5px;color:var(--tinta3);letter-spacing:.08em;text-transform:uppercase}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+/* Servicios */
+.servicios-sec{background:var(--papel)}
+.servicios{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:64px;border-top:1px solid var(--tinta)}
+.serv{display:grid;grid-template-columns:56px minmax(0,1fr);gap:0 12px;padding:32px 0 36px;border-bottom:1px solid var(--linea)}
+.serv .n{font-family:var(--display);font-weight:500;font-size:18px;color:var(--azul);padding-top:4px;position:relative}
+.serv h3{font-size:clamp(22px,2.1vw,27px);letter-spacing:.01em}
+.serv p{grid-column:2;margin-top:10px;color:var(--tinta3);font-size:16.5px;max-width:30em}
+.serv .n::after{content:"";position:absolute;left:0;top:36px;width:14px;height:3px;background:var(--naranja);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.serv:hover .n::after{transform:scaleX(1)}
 
-@media(max-width:880px){
-  .g3,.g2{grid-template-columns:1fr}
-  .swatches{grid-template-columns:repeat(2,1fr)}
-  .wrap{padding:0 20px}
-  section{padding:54px 0}
-  .hero{padding:64px 0 58px}
-  /* el encabezado deja de ser pegajoso: en telefono robaba media pantalla */
-  .topbar{position:static}
-  .nav{gap:14px 18px}
-  .nav a{font-size:11.5px;letter-spacing:.09em}
-  .hero .meta{gap:14px 26px;margin-top:32px}
-  .sw .lbl b{font-size:11px}
+/* Galería en piso */
+.galeria{padding:0;background:var(--tinta)}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,clamp(260px,27vw,420px));gap:6px}
+.gal figure{position:relative;margin:0;overflow:hidden;background:#1a1a1a}
+.gal img,.gal video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+.gal figure:hover img{transform:scale(1.03)}
+.gal figcaption{position:absolute;left:0;bottom:0;background:var(--tinta);color:var(--blanco);font-size:14px;font-weight:500;padding:10px 16px}
+.gal-titulo{position:absolute;left:0;top:0;background:var(--azul);color:var(--blanco);padding:22px 28px 24px;max-width:min(92%,440px)}
+.gal-titulo .num{color:var(--blanco);margin-bottom:8px}
+.gal-titulo h2{color:var(--blanco);font-size:clamp(28px,3vw,40px)}
+
+/* Proceso */
+.proceso{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));column-gap:28px}
+.fase{grid-column:span var(--span);display:grid;grid-template-columns:subgrid;align-content:start}
+.fase-head{grid-column:1/-1;border-top:5px solid var(--azul);padding:16px 0 28px;display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.fase:last-child .fase-head{border-top-color:var(--naranja)}
+.fase-head b{font-family:var(--display);font-weight:600;font-size:22px;text-transform:uppercase;color:var(--tinta)}
+.fase-head span{font-size:14px;color:var(--tinta3)}
+.paso .k{font-family:var(--display);font-weight:500;font-size:44px;line-height:1;color:var(--azul)}
+.paso h3{font-size:22px;margin-top:14px}
+.paso p{margin-top:10px;color:var(--tinta3);font-size:16px}
+
+/* Llamado intermedio */
+.llamado{padding-block:clamp(56px,7vw,88px);border-top:1px solid var(--linea)}
+.llamado .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px 48px}
+.llamado h2{font-size:clamp(32px,4vw,52px);max-width:14em}
+.llamado .acciones{display:flex;flex-wrap:wrap;gap:14px}
+
+/* Enfoque (bloque azul) */
+.enfoque{background:var(--azul);color:var(--blanco)}
+.enfoque h2,.enfoque h3{color:var(--blanco)}
+.enfoque .lede-s{color:var(--blanco)}
+.ejes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--linea-azul)}
+.eje{padding:36px 36px 8px 0}
+.eje + .eje{padding-left:36px;border-left:1px solid var(--linea-azul)}
+.eje .paso-n{font-family:var(--display);font-weight:500;font-size:16px;letter-spacing:.06em;color:var(--blanco)}
+.eje h3{font-size:clamp(34px,3.6vw,48px);margin-top:14px}
+.eje ul{list-style:none;padding:0;margin:26px 0 0}
+.eje li{padding:13px 0;border-top:1px solid var(--linea-azul);font-size:17px;font-weight:500}
+.eje .eje-desc{margin-top:14px;font-size:17px;color:var(--blanco);max-width:22em;min-height:3.2em}
+
+/* Nosotros */
+.nosotros{background:var(--papel)}
+.nos-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,88px)}
+.nos-texto p{font-size:clamp(18px,1.6vw,20px);color:var(--tinta2);max-width:32em}
+.nos-texto p + p{margin-top:20px}
+.industrias{margin-top:44px}
+.industrias .eyebrow{color:var(--tinta3);font-size:13px}
+.industrias ul{list-style:none;padding:0;margin:14px 0 0;display:flex;flex-wrap:wrap;gap:10px}
+.industrias li{border:1px solid var(--tinta);padding:9px 16px;font-size:15.5px;font-weight:500;color:var(--tinta)}
+.mision{margin:0;padding:34px 0 0;border-top:1px solid var(--tinta)}
+.mision .eyebrow{color:var(--tinta3)}
+.mision blockquote{margin:16px 0 0;font-family:var(--display);font-weight:500;text-transform:uppercase;font-size:clamp(28px,3vw,40px);line-height:1.12;color:var(--tinta)}
+.valores{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:52px;border-top:1px solid var(--linea)}
+.valor{padding:24px 16px 0 0}
+.valor b{display:block;font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:22px;color:var(--azul)}
+.valor span{display:block;margin-top:6px;font-size:15.5px;color:var(--tinta3)}
+
+/* Preguntas */
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(40px,6vw,88px)}
+.faq-grid .lede-s{margin-top:24px}
+.faq{border-top:1px solid var(--tinta)}
+.faq details{border-bottom:1px solid var(--linea)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;
+  padding:26px 0;font-size:clamp(18px,1.7vw,21px);font-weight:600;color:var(--tinta)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:16px;height:16px;
+  background:linear-gradient(var(--azul),var(--azul)) center/16px 2px no-repeat,linear-gradient(var(--azul),var(--azul)) center/2px 16px no-repeat;
+  transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding:0 48px 28px 0;color:var(--tinta2);max-width:40em}
+
+/* Contacto */
+.contacto{border-top:1px solid var(--linea)}
+.contacto-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(40px,6vw,88px)}
+.contacto h2{font-size:clamp(40px,5.4vw,70px)}
+.datos{margin-top:40px;border-top:1px solid var(--linea)}
+.datos div{padding:18px 0;border-bottom:1px solid var(--linea)}
+.datos .eyebrow{display:block;color:var(--tinta3);font-size:13px}
+.datos a,.datos p{font-size:20px;color:var(--tinta);text-decoration:none;font-weight:500}
+.datos a:hover{color:var(--azul)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px;align-content:start}
+.campo{display:flex;flex-direction:column;gap:8px}
+.campo.full{grid-column:1/-1}
+label{font-size:14px;font-weight:600;color:var(--tinta2)}
+input,select,textarea{font:inherit;font-size:16px;color:var(--tinta);background:var(--blanco);border:1px solid #B9B6B0;border-radius:0;padding:14px;width:100%;appearance:none;-webkit-appearance:none}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%230E1013' stroke-width='1.6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 1px var(--azul)}
+.form-pie{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:16px 24px}
+.estado{font-size:15px;color:var(--tinta2)}
+
+/* Pie */
+footer{background:var(--papel);border-top:1px solid var(--linea);padding-block:48px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px}
+footer .brand img{height:30px}
+footer .brand span{font-size:24px}
+.pie-desc{font-size:14px;color:var(--tinta3);margin-top:8px}
+.pie-der{font-size:14px;color:var(--tinta3);text-align:right}
+.pie-der a{color:var(--tinta2);text-decoration:none;font-weight:500}
+
+/* WhatsApp flotante */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:60;display:inline-flex;align-items:center;gap:10px;
+  background:var(--naranja);color:var(--tinta);text-decoration:none;font-weight:600;font-size:15px;padding:14px 18px;
+  transform:translateY(120%);opacity:0;transition:transform .35s cubic-bezier(.2,.7,.2,1),opacity .35s,background .2s}
+.wa-float.on{transform:none;opacity:1}
+.wa-float:hover{background:#FF7A2E}
+.no-js .wa-float,html:not(.js) .wa-float{transform:none;opacity:1}
+
+/* ---------- Movimiento ---------- */
+.js .rv{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .hero .rule{transform:scaleX(0);transition:transform .9s cubic-bezier(.7,0,.2,1) .35s}
+.js .hero.in .rule{transform:scaleX(1)}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv,.js .hero .rule,.wa-float,.gal img{opacity:1;transform:none;transition:none}
 }
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1100px){
+  .nav{position:fixed;inset:var(--top) 0 auto 0;background:var(--blanco);flex-direction:column;align-items:stretch;gap:0;
+    padding:8px var(--gutter) 24px;border-bottom:1px solid var(--linea);display:none}
+  .nav.open{display:flex}
+  .nav a{padding:16px 0;border-bottom:1px solid var(--linea);font-size:17px;background:none}
+  .nav a.cta{margin-top:16px;justify-content:center;text-align:center;border:0}
+  .menu-btn{display:block}
+}
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero-media{order:-1;aspect-ratio:16/10}
+  .hero-copy{padding:56px var(--gutter) 64px}
+  .shead,.nos-grid,.contacto-grid,.faq-grid{grid-template-columns:1fr}
+  .servicios{grid-template-columns:1fr}
+  .riesgos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .proceso{grid-template-columns:1fr;row-gap:40px}
+  .fase{grid-column:auto;grid-template-columns:1fr;row-gap:28px}
+  .paso{display:grid;grid-template-columns:64px minmax(0,1fr)}
+  .paso .k{font-size:36px;grid-row:1/3}
+  .paso h3{margin-top:0}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none}
+  .gal figure{aspect-ratio:4/3}
+}
+@media (max-width:760px){
+  body{font-size:16.5px}
+  .creds .wrap{grid-template-columns:1fr}
+  .cred,.cred + .cred{padding:28px 0;border-left:0}
+  .cred + .cred{border-top:1px solid var(--linea)}
+  .ejes{grid-template-columns:1fr}
+  .eje,.eje + .eje{padding:32px 0 8px;border-left:0}
+  .eje + .eje{border-top:1px solid var(--linea-azul)}
+  .serv{grid-template-columns:44px minmax(0,1fr)}
+  .valores{grid-template-columns:1fr}
+  .valor{padding:20px 0;border-bottom:1px solid var(--linea)}
+  form{grid-template-columns:1fr}
+  .pie-der{text-align:left}
+  .riesgos{grid-template-columns:1fr}
+  .gal{grid-template-columns:1fr}
+  .faq details p{padding-right:0}
+  .wa-float{right:16px;bottom:16px;padding:13px 16px}
+}
+
+/* ---------- v3.2: marca de agua animada ---------- */
+.hero-copy,.llamado{position:relative;overflow:hidden}
+.hero-copy > :not(.linea-wm),.llamado .wrap{position:relative;z-index:1}
+.linea-wm{position:absolute;left:0;right:0;bottom:0;height:clamp(130px,36%,250px);color:rgba(255,255,255,.17);pointer-events:none;z-index:0}
+.linea-wm--claro{left:auto;width:min(62%,760px);height:100%;color:rgba(0,87,155,.14)}
+.linea-wm svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.lp-banda{animation:lp-banda .72s linear infinite}
+@keyframes lp-banda{to{stroke-dashoffset:-48}}
+.lp-piezas{animation:lp-piezas 3s linear infinite}
+@keyframes lp-piezas{to{transform:translateX(200px)}}
+.lp-prensa{animation:lp-prensa 3s ease-in-out infinite}
+@keyframes lp-prensa{0%,30%{transform:translateY(0)}48%,58%{transform:translateY(34px)}78%,100%{transform:translateY(0)}}
+.lp-brazo1{transform-box:view-box;transform-origin:550px 120px;animation:lp-brazo1 3s ease-in-out infinite}
+@keyframes lp-brazo1{0%,100%{transform:rotate(-12deg)}50%{transform:rotate(10deg)}}
+.lp-brazo2{transform-box:view-box;transform-origin:622px 78px;animation:lp-brazo2 3s ease-in-out infinite}
+@keyframes lp-brazo2{0%,100%{transform:rotate(14deg)}50%{transform:rotate(-18deg)}}
+.lp-escaneo{animation:lp-escaneo 1.5s ease-in-out infinite alternate}
+@keyframes lp-escaneo{from{transform:translateY(-70px)}to{transform:translateY(0)}}
+.lp-luz{fill:var(--naranja);stroke:none;animation:lp-luz 1.5s steps(1) infinite}
+.lp-luz2{animation-delay:.75s}
+@keyframes lp-luz{0%{opacity:.95}50%{opacity:.2}}
+.lp-pausa *{animation-play-state:paused!important}
+
+/* ---------- v3.2: oferta abierta ---------- */
+.serv-mas{margin-top:44px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 40px;border:1px dashed var(--tinta3);padding:26px 30px}
+.serv-mas p{font-size:clamp(17px,1.5vw,19px);color:var(--tinta2);max-width:40em}
+.serv-mas b{color:var(--tinta)}
+
+/* ---------- v3.2: barra de avance del proceso ---------- */
+.fase-head,.fase:last-child .fase-head{border-top-color:var(--linea);position:relative}
+.fase-head::before{content:"";position:absolute;left:0;right:0;top:-5px;height:5px;background:var(--azul);transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.7,0,.2,1)}
+.fase:nth-child(2) .fase-head::before{transition-delay:.45s}
+.fase:nth-child(3) .fase-head::before{transition-delay:.9s;background:var(--naranja)}
+.fase.in .fase-head::before,html:not(.js) .fase-head::before{transform:scaleX(1)}
+
+@media (max-width:980px){
+  .linea-wm--claro{width:100%}
+}
+@media (max-width:760px){
+  .serv-mas{padding:22px 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  .lp *,.ra *{animation:none!important}
+  .fase-head::before{transform:scaleX(1);transition:none}
+}
+
+/* ---------- v3.2b: la línea animada va debajo del contenido, completa ---------- */
+.linea-wm,.linea-wm--claro{top:auto;height:auto;aspect-ratio:1200/260}
+.linea-wm{left:0;right:0;width:100%}
+.linea-wm--claro{left:auto;right:0;width:min(58%,760px)}
+.hero-copy{padding-top:clamp(48px,5.5vw,88px);padding-bottom:calc(28px + 12.5vw)}
+@media (max-width:980px){
+  .hero-copy{padding-bottom:calc(48px + 22vw)}
+  .llamado{padding-bottom:calc(56px + 22vw)}
+  .linea-wm--claro{width:100%}
+}
+
+/* ---------- v3.3: retos en oscuro con animaciones ---------- */
+.retos-sec{background:var(--tinta);color:var(--blanco)}
+.retos-sec h2{color:var(--blanco)}
+.retos-sec .lede-s{color:#C9CED6}
+.retos-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #2B3038;border-left:1px solid #2B3038}
+.reto{position:relative;padding:26px 26px 36px;border-right:1px solid #2B3038;border-bottom:1px solid #2B3038;transition:background .3s}
+.reto::before{content:"";position:absolute;left:-1px;right:-1px;top:-1px;height:3px;background:var(--naranja);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.7,0,.2,1)}
+.reto:hover{background:#15181D}
+.reto:hover::before{transform:scaleX(1)}
+.reto-anim{aspect-ratio:260/150;margin-bottom:26px;border:1px solid #2B3038;background:#12151A;overflow:hidden}
+.reto-anim svg{display:block;width:100%;height:100%}
+.reto-n{display:block;font-family:var(--display);font-weight:500;font-size:15px;letter-spacing:.06em;color:var(--naranja)}
+.reto h3{color:var(--blanco);font-size:clamp(23px,2vw,29px);margin-top:10px}
+.reto p{margin-top:12px;color:#C9CED6;font-size:16px}
+
+.ra-bar{transform-box:fill-box;transform-origin:left center;animation:ra-bar 4.5s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes ra-bar{0%{transform:scaleX(.3)}40%,58%{transform:scaleX(1.62)}82%,100%{transform:scaleX(1.28)}}
+.ra-bar-over{opacity:0;animation:ra-bar 4.5s cubic-bezier(.6,0,.3,1) infinite,ra-over 4.5s linear infinite}
+@keyframes ra-over{0%,28%{opacity:0}38%,60%{opacity:1}74%,100%{opacity:0}}
+.ra-curva{animation:ra-draw 4.5s ease-in-out infinite}
+@keyframes ra-draw{0%{stroke-dashoffset:100}55%,88%{stroke-dashoffset:0;opacity:1}100%{stroke-dashoffset:0;opacity:0}}
+.ra-fin{transform-box:fill-box;transform-origin:center;animation:ra-pop 4.5s ease-out infinite}
+@keyframes ra-pop{0%,52%{transform:scale(0)}60%{transform:scale(1.5)}66%,88%{transform:scale(1)}100%{transform:scale(0)}}
+.ra-check{animation:ra-check 4.5s ease-out infinite both}
+@keyframes ra-check{0%{stroke-dashoffset:1}10%,78%{stroke-dashoffset:0}90%,100%{stroke-dashoffset:1}}
+.ra-sello{transform-box:fill-box;transform-origin:center;animation:ra-sello 4.5s cubic-bezier(.2,1.4,.4,1) infinite}
+@keyframes ra-sello{0%,44%{transform:scale(0) rotate(-20deg);opacity:0}54%,84%{transform:scale(1) rotate(0);opacity:1}94%,100%{transform:scale(0);opacity:0}}
+.ra-nodo{animation:ra-nodo 4.5s ease-out infinite both}
+@keyframes ra-nodo{0%,6%{fill-opacity:0;stroke-opacity:.6}16%,82%{fill-opacity:1;stroke-opacity:1}94%,100%{fill-opacity:0;stroke-opacity:.6}}
+.anim-pausa .ra *{animation-play-state:paused!important}
+
+@media (max-width:980px){ .retos-grid{grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media (max-width:600px){ .retos-grid{grid-template-columns:1fr} .reto{padding:22px 20px 30px} }
+
+/* ---------- v3.4: estilo B2B (referencias Xometry, Fictiv, Plex, Kaizen) ---------- */
+:root{--azul-claro:#EEF4FA;--borde:#DDE3EA;--sombra:0 1px 2px rgba(14,16,19,.06),0 8px 24px rgba(0,87,155,.08);--sombra-hover:0 2px 4px rgba(14,16,19,.06),0 18px 40px rgba(0,87,155,.16)}
+.btn,.btn-sec,.nav a.cta,.wa-float{border-radius:6px}
+
+/* Hero con palomitas */
+.hero-checks{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:10px}
+.hero-checks li{position:relative;padding-left:32px;font-size:17px;font-weight:500;color:var(--blanco)}
+.hero-checks li::before{content:"";position:absolute;left:0;top:3px;width:20px;height:20px;border-radius:50%;background:var(--naranja)}
+.hero-checks li::after{content:"";position:absolute;left:7px;top:7px;width:5px;height:9px;border:solid var(--tinta);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.hero .acciones{margin-top:34px}
+
+/* Credenciales como barra de cifras */
+.creds{background:var(--azul-claro);border-bottom:0}
+.creds .wrap{text-align:center}
+.cred,.cred + .cred{border-left:0;padding:40px 24px}
+.cred + .cred{border-left:1px solid var(--borde)}
+.cred span{margin-inline:auto}
+
+/* Franja de normas */
+.normas{border-bottom:1px solid var(--borde);background:var(--blanco)}
+.normas .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:14px 28px;padding-block:22px}
+.normas-t{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--tinta3)}
+.normas ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+.normas li{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--tinta2);padding:6px 14px;border:1px solid var(--borde);border-radius:999px}
+.normas li::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--azul) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpath d='M4 7.2l2 2 4-4.4' fill='none' stroke='%23fff' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* Retos en claro */
+.retos-sec{background:var(--blanco);color:var(--tinta2)}
+.retos-sec h2{color:var(--tinta)}
+.retos-sec .lede-s{color:var(--tinta2)}
+.retos-grid{border:0;gap:24px}
+.reto{background:var(--blanco);border:1px solid var(--borde);border-radius:10px;padding:22px 22px 30px;box-shadow:var(--sombra);transition:transform .3s,box-shadow .3s}
+.reto::before{left:22px;right:22px;top:-1px;border-radius:0 0 3px 3px}
+.reto:hover{background:var(--blanco);transform:translateY(-4px);box-shadow:var(--sombra-hover)}
+.reto-anim{background:var(--azul-claro);border:0;border-radius:6px}
+.reto h3{color:var(--tinta)}
+.reto p{color:var(--tinta3)}
+
+/* Servicios en tarjetas */
+.servicios{border-top:0;gap:20px;column-gap:20px}
+.serv{background:var(--blanco);border:1px solid var(--borde);border-radius:10px;padding:26px 26px 28px;box-shadow:var(--sombra);
+  grid-template-columns:48px minmax(0,1fr);gap:0 18px;transition:transform .3s,box-shadow .3s,border-color .3s}
+.serv:hover{transform:translateY(-4px);box-shadow:var(--sombra-hover);border-color:#BFD3E6}
+.serv-ico{grid-row:1/4;width:48px;height:48px;border-radius:8px;background:var(--azul-claro);color:var(--azul);display:grid;place-items:center;transition:background .3s,color .3s}
+.serv-ico svg{width:28px;height:28px}
+.serv:hover .serv-ico{background:var(--azul);color:var(--blanco)}
+.serv .n{grid-column:2;padding-top:0;font-size:14px;color:var(--naranja)}
+.serv .n::after{display:none}
+.serv h3{grid-column:2;margin-top:4px}
+.serv p{grid-column:2}
+.serv-mas{border:1px dashed #9FB6CC;border-radius:10px;background:var(--blanco)}
+
+/* Galería con esquinas y aire */
+.galeria{background:var(--blanco);padding-inline:var(--gutter)}
+.gal{max-width:1344px;margin:0 auto;gap:12px}
+.gal figure{border-radius:10px}
+.gal figcaption{border-radius:0 8px 0 0}
+
+/* FAQ y formulario */
+.faq details{border-bottom-color:var(--borde)}
+input,select,textarea{border-radius:6px;border-color:#C9D2DC}
+
+@media (max-width:760px){
+  .cred + .cred{border-left:0;border-top:1px solid var(--borde)}
+  .serv{padding:22px 20px 24px;grid-template-columns:44px minmax(0,1fr);gap:0 14px}
+  .serv-ico{width:44px;height:44px}
+  .normas .wrap{justify-content:flex-start}
+}
+.gal figcaption{background:var(--azul)}
+.serv-ico svg{width:30px;height:30px}
 </style>
 </head>
 <body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
 
-<div class="topbar"><div class="wrap">
-  <a class="brand" href="#"><img src="assets/logo-amape-isotipo.png" alt=""><span>AMAPE</span></a>
-  <nav class="nav">
-    <a href="#identidad">Identidad</a>
-    <a href="#aplicaciones">Aplicaciones</a>
-    <a href="#presentacion">Presentación</a>
-    <a href="#digital">Digital</a>
-    <a href="#video">Video</a>
-  </nav>
-</div></div>
+<!-- Íconos reutilizables -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.6c.2-.4.5-.4.8-.4h.5c.2 0 .4.1.5.4l.7 1.6c.1.2 0 .5-.1.6l-.5.6c.4.9 1.2 1.7 2.1 2.1l.6-.5c.2-.2.4-.2.6-.1l1.6.7c.3.1.4.3.4.5v.5c0 .3-.1.6-.4.8-.6.4-1.4.5-2.1.3-2.1-.7-3.8-2.4-4.5-4.5-.3-.7-.2-1.5.2-2.1z" fill="currentColor"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path d="M6.6 3.5h2.6l1.4 4.2-1.9 1.3a11 11 0 0 0 6.3 6.3l1.3-1.9 4.2 1.4v2.6a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <defs><pattern id="ra-grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#00579B" stroke-opacity=".08"/></pattern></defs>
+</svg>
 
-<header class="hero"><div class="wrap">
-  <div class="eyebrow">Sistema de identidad · 2026</div>
-  <h1>AMAPE</h1>
-  <hr class="rule">
-  <p>Asesores en Manufactura Avanzada y Proyectos Especiales. Transferencia tecnológica
-     y arranque de operaciones en Ciudad Juárez, Chihuahua.</p>
-  <div class="meta">
-    <span>Azul #00579B</span><span>Naranja #F86A1B</span><span>30 piezas</span><span>6 videos</span>
+<template id="tpl-linea">
+  <svg class="lp" viewBox="0 0 1200 260" preserveAspectRatio="xMidYMax meet" focusable="false">
+    <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="0" y1="252" x2="1200" y2="252"/>
+      <line class="lp-banda" x1="0" y1="188" x2="1200" y2="188" stroke-dasharray="14 10"/>
+      <line x1="0" y1="206" x2="1200" y2="206"/>
+      <path d="M60 206V252M260 206V252M460 206V252M660 206V252M860 206V252M1060 206V252"/>
+      <g class="lp-piezas"><rect x="-170" y="160" width="44" height="26" rx="2"/><rect x="30" y="160" width="44" height="26" rx="2"/><rect x="230" y="160" width="44" height="26" rx="2"/><rect x="430" y="160" width="44" height="26" rx="2"/><rect x="630" y="160" width="44" height="26" rx="2"/><rect x="830" y="160" width="44" height="26" rx="2"/><rect x="1030" y="160" width="44" height="26" rx="2"/><rect x="1230" y="160" width="44" height="26" rx="2"/></g>
+      <path d="M190 188V40H330V188"/>
+      <path d="M204 40V188M316 40V188" stroke-dasharray="3 7"/>
+      <g class="lp-prensa"><rect x="236" y="54" width="48" height="36"/><line x1="260" y1="90" x2="260" y2="114"/><rect x="238" y="114" width="44" height="10"/></g>
+      <path d="M330 40V16"/>
+      <path d="M528 252V128H572V252"/><circle cx="550" cy="120" r="9"/>
+      <g class="lp-brazo1">
+        <line x1="550" y1="120" x2="622" y2="78"/><circle cx="622" cy="78" r="6"/>
+        <g class="lp-brazo2"><line x1="622" y1="78" x2="656" y2="130"/><path d="M646 130h20M648 130v12M664 130v12"/></g>
+      </g>
+      <path d="M880 188V58H1010V188"/>
+      <rect x="930" y="64" width="30" height="20"/>
+      <path d="M945 84L905 170M945 84L985 170" stroke-dasharray="4 6"/>
+      <line class="lp-escaneo" x1="910" y1="168" x2="980" y2="168"/>
+      <path d="M1010 58V34"/>
+      <path d="M1090 252V120H1170V252M1090 150H1170M1090 180H1170M1090 210H1170"/>
+    </g>
+    <circle class="lp-luz" cx="330" cy="11" r="5"/>
+    <circle class="lp-luz lp-luz2" cx="1010" cy="29" r="5"/>
+  </svg>
+</template>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="AMAPE, inicio">
+      <img src="assets/amape-isotipo-96.png" width="48" height="36" alt="">
+      <span>AMAPE</span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><i></i><i></i><i></i></button>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="tel" href="tel:+526568229302"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>656 822 9302</a>
+      <a class="cta" href="#contacto">Contacto</a>
+    </nav>
   </div>
-</div></header>
+</header>
 
-<section id="identidad"><div class="wrap">
-  <div class="shead"><span class="num">01</span><h2>Identidad</h2></div>
-  <p class="lede">El logotipo, sus versiones aprobadas, la paleta, la tipografía y el patrón.
-     Todo lo demás se construye sobre esta base.</p>
+<main id="contenido">
 
-  <div class="swatches">
-    <div class="sw"><div class="chip" style="background:#00579B"></div>
-      <div class="lbl"><b>Azul AMAPE</b><span>HEX 00579B</span></div></div>
-    <div class="sw"><div class="chip" style="background:#F86A1B"></div>
-      <div class="lbl"><b>Naranja AMAPE</b><span>HEX F86A1B</span></div></div>
-    <div class="sw"><div class="chip" style="background:#FFFFFF;border-bottom:1px solid #D9D7D3"></div>
-      <div class="lbl"><b>Blanco</b><span>HEX FFFFFF</span></div></div>
-    <div class="sw"><div class="chip" style="background:#0A0A0A"></div>
-      <div class="lbl"><b>Negro</b><span>HEX 0A0A0A</span></div></div>
+<div class="hero" id="inicio">
+  <div class="hero-copy">
+    <div class="linea-wm" data-linea aria-hidden="true"></div>
+    <p class="eyebrow">Consultoría para plantas de manufactura · Ciudad Juárez</p>
+    <h1>Hacemos avanzar <br>su manufactura</h1>
+    <span class="rule" aria-hidden="true"></span>
+    <p class="lede">Transferimos líneas, lanzamos productos nuevos, reducimos costos, preparamos certificaciones ISO y formamos a su personal.</p>
+    <ul class="hero-checks">
+      <li>Más de 30 años de experiencia en manufactura</li>
+      <li>Un solo equipo, del diagnóstico a la entrega</li>
+      <li>Base en Ciudad Juárez, servicio en todo el país</li>
+    </ul>
+    <div class="acciones">
+      <a class="btn" href="#contacto">Solicitar visita a su planta</a>
+      <a class="link-claro" href="https://wa.me/526568229302?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20AMAPE." target="_blank" rel="noopener">
+        <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Escríbanos por WhatsApp</a>
+    </div>
   </div>
-
-  <div class="grid g3">
-    <figure><img src="assets/amape-logo-brand-guidelines-grid.jpeg" alt="Versiones del logo">
-      <figcaption><b>Versiones</b>Principal, monocromo y negativo sobre azul y negro.</figcaption></figure>
-    <figure><img src="assets/brand-guidelines-color-palette.jpeg" alt="Paleta de color">
-      <figcaption><b>Color</b>Cuatro valores y proporción de uso 90/10.</figcaption></figure>
-    <figure><img src="assets/brand-guidelines-typography-spec-.jpeg" alt="Tipografía">
-      <figcaption><b>Tipografía</b>Grotesca en tres pesos. Titulares en condensada.</figcaption></figure>
-    <figure><img src="assets/amape-brand-guidelines-iconograp-.jpeg" alt="Iconografía">
-      <figcaption><b>Iconografía</b>Seis íconos de línea, uno por servicio.</figcaption></figure>
-    <figure><img src="assets/geometric-pattern-design-with-logo.jpeg" alt="Patrón de marca">
-      <figcaption><b>Patrón</b>Construido con la A, naranja como acento mínimo.</figcaption></figure>
-    <figure><img src="assets/hazlo-con-un-fondo-que.jpeg" alt="Logotipo AMAPE">
-      <figcaption><b>Logotipo</b>Marca principal sobre fondo claro.</figcaption></figure>
+  <div class="hero-media">
+    <img src="assets/linea-electronica.jpg" alt="Dos técnicos ajustando una línea de ensamble de electrónica" style="object-position:68% 50%" fetchpriority="high">
   </div>
-</div></section>
+</div>
 
-<section id="aplicaciones"><div class="wrap">
-  <div class="shead"><span class="num">02</span><h2>Aplicaciones</h2></div>
-  <p class="lede">Lo que el cliente toca y ve dentro de su planta. En este giro la marca
-     se juzga en el piso, no en la pantalla.</p>
-  <div class="grid g3">
-    <figure><img src="assets/business-cards-mockup-on-concrete.jpeg" alt="Tarjetas de presentación">
-      <figcaption><b>Tarjetas</b>Cara azul con marca en blanco, reverso con datos.</figcaption></figure>
-    <figure><img src="assets/hard-hat-on-concrete-floor.jpeg" alt="Casco de seguridad">
-      <figcaption><b>Casco</b>Marca al costado y banda azul en la base.</figcaption></figure>
-    <figure><img src="assets/blue-work-shirt-branding-mockup.jpeg" alt="Camisa de campo">
-      <figcaption><b>Camisa de campo</b>Bordado en blanco al pecho.</figcaption></figure>
-    <figure><img src="assets/plant-access-id-badge-mockup.jpeg" alt="Gafete de planta">
-      <figcaption><b>Gafete</b>Acceso a planta, cordón azul.</figcaption></figure>
-    <figure><img src="assets/pickup-truck-with-logo-mockup.jpeg" alt="Camioneta rotulada">
-      <figcaption><b>Camioneta</b>Marca en puerta trasera y franja naranja.</figcaption></figure>
-    <figure><img src="assets/vinyl-banner-on-concrete-wall.jpeg" alt="Lona de señalética">
-      <figcaption><b>Señalética</b>Lona de zona de transferencia en planta.</figcaption></figure>
-    <figure><img src="assets/stationery-set-brand-identity-mo-.jpeg" alt="Papelería">
-      <figcaption><b>Papelería</b>Hoja membretada, carpeta y sobre.</figcaption></figure>
-    <figure><img src="assets/technical-report-cover-page-design.jpeg" alt="Reporte técnico">
-      <figcaption><b>Reporte técnico</b>El entregable de AMAPE, con campos por llenar.</figcaption></figure>
-    <figure><img src="assets/sales-sheet-design-for-amape.jpeg" alt="Hoja de servicio">
-      <figcaption><b>Hoja de servicio</b>La que se deja en planta tras una visita.</figcaption></figure>
+<div class="creds">
+  <div class="wrap">
+    <div class="cred rv"><b>+30 años</b><span>de experiencia del equipo en la industria manufacturera.</span></div>
+    <div class="cred rv"><b>A la medida</b><span>Soluciones que se adaptan a su planta y a su reto.</span></div>
+    <div class="cred rv"><b>Ciudad Juárez</b><span>Base de operaciones, con servicio en todo el país.</span></div>
   </div>
-</div></section>
+</div>
 
-<section id="presentacion"><div class="wrap">
-  <div class="shead"><span class="num">03</span><h2>Presentación</h2></div>
-  <p class="lede">Trece diapositivas que reemplazan al deck anterior. Sin gráfica inventada,
-     sin plantilla de PowerPoint y sin ninguna cifra de dinero.</p>
-  <div class="grid g2">
-    <figure><img src="assets/presentation-slide-with-logo-and-.jpeg" alt="Portada">
-      <figcaption><b>01 · Portada</b>Transferencia tecnológica y arranque de operaciones.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-with-statisti-.jpeg" alt="Quiénes somos">
-      <figcaption><b>02 · Quiénes somos</b>40 años de equipo, tres industrias, base en Juárez.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-planning-norm-.jpeg" alt="Planeación normativa">
-      <figcaption><b>03 · Planeación normativa</b>Misión, visión y valores.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-showing-workf-.jpeg" alt="Cómo trabajamos">
-      <figcaption><b>05 · Cómo trabajamos</b>Servicio, proyecto y entrega.</figcaption></figure>
-    <figure><img src="assets/blue-presentation-slide-with-logo.jpeg" alt="Servicio 01">
-      <figcaption><b>06 · Servicio 01</b>Transferencia de línea planta a planta.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-with-amape-logo.jpeg" alt="Servicio 02">
-      <figcaption><b>07 · Servicio 02</b>Arranque de producto nuevo.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-for-validatio-.jpeg" alt="Servicio 04">
-      <figcaption><b>09 · Servicio 04</b>Validación y certificación.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-with-engineer-.jpeg" alt="Servicio 05">
-      <figcaption><b>10 · Servicio 05</b>Ingeniería en sitio.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-design-with-logo.jpeg" alt="Servicio 06">
-      <figcaption><b>11 · Servicio 06</b>Posventa y mantenimiento.</figcaption></figure>
-    <figure><img src="assets/presentation-slide-design-with-logo-2.jpeg" alt="Diferenciador">
-      <figcaption><b>12 · Diferenciador</b>Transferencia de EU a México bajo IMMEX.</figcaption></figure>
-    <figure><img src="assets/design-presentation-closing-slide.jpeg" alt="Cierre">
-      <figcaption><b>13 · Cierre</b>Cuéntenos qué línea necesita mover.</figcaption></figure>
+<div class="normas">
+  <div class="wrap">
+    <span class="normas-t">Normas y programas con los que trabajamos</span>
+    <ul><li>ISO 9001</li><li>IATF 16949</li><li>ISO 13485</li><li>IMMEX</li><li>NOM-STPS</li></ul>
   </div>
-</div></section>
+</div>
 
-<section id="digital"><div class="wrap">
-  <div class="shead"><span class="num">04</span><h2>Digital</h2></div>
-  <p class="lede">LinkedIn es el canal donde vive el comprador industrial. El sitio sostiene
-     la búsqueda que viene después.</p>
-  <div class="grid g2">
-    <figure><img src="assets/website-homepage-design-layout.jpeg" alt="Sitio web">
-      <figcaption><b>Sitio web</b>Home con hero azul y sección de servicios.</figcaption></figure>
-    <figure><img src="assets/brand-guidelines-digital-applica-.jpeg" alt="Redes y correo">
-      <figcaption><b>LinkedIn y correo</b>Portada, avatar y firma de correo.</figcaption></figure>
+<section class="retos-sec" id="retos">
+  <div class="wrap">
+    <div class="shead">
+      <div class="rv"><span class="num">01 · Retos</span><h2>¿Qué frena a su planta?</h2></div>
+      <p class="lede-s rv">Los problemas que más vemos en piso, y los que resolvemos todos los días.</p>
+    </div>
+    <div class="retos-grid">
+      <article class="reto rv">
+        <div class="reto-anim" aria-hidden="true"><svg class="ra" viewBox="0 0 260 150" focusable="false">
+  <rect width="260" height="150" fill="url(#ra-grid)"/>
+  <line x1="40" y1="18" x2="40" y2="134" stroke="#00579B" stroke-opacity=".35" stroke-width="1.5"/>
+  <rect x="50" y="30" width="80" height="12" fill="#00579B" fill-opacity=".22"/>
+  <rect x="80" y="56" width="70" height="12" fill="#00579B" fill-opacity=".22"/>
+  <rect x="110" y="82" width="56" height="12" fill="#00579B" fill-opacity=".22"/>
+  <rect class="ra-bar" x="60" y="108" width="100" height="12" fill="#00579B"/>
+  <rect class="ra-bar ra-bar-over" x="60" y="108" width="100" height="12" fill="#F86A1B"/>
+  <line x1="200" y1="14" x2="200" y2="138" stroke="#F86A1B" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M194 14h12l-6 8z" fill="#F86A1B"/>
+</svg></div>
+        <span class="reto-n">01</span>
+        <h3>Proyectos que se retrasan</h3>
+        <p>Transferencias, arranques y productos nuevos que se salen de tiempo y de presupuesto.</p>
+      </article>
+      <article class="reto rv">
+        <div class="reto-anim" aria-hidden="true"><svg class="ra" viewBox="0 0 260 150" focusable="false">
+  <rect width="260" height="150" fill="url(#ra-grid)"/>
+  <path d="M30 18V130H244" fill="none" stroke="#00579B" stroke-opacity=".35" stroke-width="1.5"/>
+  <line x1="30" y1="106" x2="244" y2="106" stroke="#F86A1B" stroke-width="2" stroke-dasharray="5 5"/>
+  <path d="M30 42 L68 38 L98 50 L128 40 L160 72 L196 96 L234 106" fill="none" stroke="#00579B" stroke-opacity=".14" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="236" y="98" fill="#F86A1B" font-family="Inter,sans-serif" font-size="11" font-weight="600" text-anchor="end">META</text>
+  <path class="ra-curva" d="M30 42 L68 38 L98 50 L128 40 L160 72 L196 96 L234 106" fill="none" stroke="#00579B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" pathLength="100" stroke-dasharray="100"/>
+  <circle class="ra-fin" cx="234" cy="106" r="6" fill="#F86A1B"/>
+</svg></div>
+        <span class="reto-n">02</span>
+        <h3>Costos que no bajan</h3>
+        <p>Desperdicio, retrabajo y tiempos muertos que se vuelven parte de la operación.</p>
+      </article>
+      <article class="reto rv">
+        <div class="reto-anim" aria-hidden="true"><svg class="ra" viewBox="0 0 260 150" focusable="false">
+  <rect width="260" height="150" fill="url(#ra-grid)"/>
+  <rect x="66" y="18" width="128" height="122" rx="4" fill="none" stroke="#00579B" stroke-width="1.5"/>
+  <rect x="104" y="11" width="52" height="14" rx="3" fill="#FFFFFF" stroke="#00579B" stroke-width="1.5"/>
+  <rect x="84" y="36" width="15" height="15" fill="none" stroke="#00579B" stroke-width="1.5"/><line x1="110" y1="44" x2="176" y2="44" stroke="#00579B" stroke-opacity=".35" stroke-width="2"/><path class="ra-check" style="animation-delay:0.00s" d="M86 43 l5 5 l9 -11" fill="none" stroke="#F86A1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/><rect x="84" y="60" width="15" height="15" fill="none" stroke="#00579B" stroke-width="1.5"/><line x1="110" y1="68" x2="164" y2="68" stroke="#00579B" stroke-opacity=".35" stroke-width="2"/><path class="ra-check" style="animation-delay:0.45s" d="M86 67 l5 5 l9 -11" fill="none" stroke="#F86A1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/><rect x="84" y="84" width="15" height="15" fill="none" stroke="#00579B" stroke-width="1.5"/><line x1="110" y1="92" x2="152" y2="92" stroke="#00579B" stroke-opacity=".35" stroke-width="2"/><path class="ra-check" style="animation-delay:0.90s" d="M86 91 l5 5 l9 -11" fill="none" stroke="#F86A1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/><rect x="84" y="108" width="15" height="15" fill="none" stroke="#00579B" stroke-width="1.5"/><line x1="110" y1="116" x2="140" y2="116" stroke="#00579B" stroke-opacity=".35" stroke-width="2"/><path class="ra-check" style="animation-delay:1.35s" d="M86 115 l5 5 l9 -11" fill="none" stroke="#F86A1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" pathLength="1" stroke-dasharray="1"/>
+  <g class="ra-sello"><circle cx="198" cy="116" r="18" fill="#FFFFFF" stroke="#F86A1B" stroke-width="2.5"/><path d="M189 116l6 6l11 -13" fill="none" stroke="#F86A1B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg></div>
+        <span class="reto-n">03</span>
+        <h3>Auditorías sin pasar</h3>
+        <p>Procesos sin documentar ni validar cuando llega la auditoría del cliente o la certificación.</p>
+      </article>
+      <article class="reto rv">
+        <div class="reto-anim" aria-hidden="true"><svg class="ra" viewBox="0 0 260 150" focusable="false">
+  <rect width="260" height="150" fill="url(#ra-grid)"/>
+  <path d="M130 38V54M70 54H190M70 54V69M130 54V69M190 54V69M70 87V102M45 102H95M45 102V115M95 102V115M190 87V102M165 102H215M165 102V115M215 102V115" fill="none" stroke="#00579B" stroke-opacity=".35" stroke-width="1.5"/>
+  <circle cx="130" cy="28" r="10" fill="#00579B"/>
+  <circle cx="130" cy="78" r="9" fill="#00579B"/>
+  <circle class="ra-nodo" style="animation-delay:0.00s" cx="70" cy="78" r="9" fill="#00579B" stroke="#00579B" stroke-width="1.5"/><circle class="ra-nodo" style="animation-delay:0.35s" cx="190" cy="78" r="9" fill="#00579B" stroke="#00579B" stroke-width="1.5"/><circle class="ra-nodo" style="animation-delay:0.70s" cx="45" cy="124" r="9" fill="#00579B" stroke="#00579B" stroke-width="1.5"/><circle class="ra-nodo" style="animation-delay:1.05s" cx="95" cy="124" r="9" fill="#00579B" stroke="#00579B" stroke-width="1.5"/><circle class="ra-nodo" style="animation-delay:1.40s" cx="165" cy="124" r="9" fill="#00579B" stroke="#00579B" stroke-width="1.5"/><circle class="ra-nodo" style="animation-delay:1.75s" cx="215" cy="124" r="9" fill="#F86A1B" stroke="#F86A1B" stroke-width="1.5"/>
+</svg></div>
+        <span class="reto-n">04</span>
+        <h3>Gente que no alcanza</h3>
+        <p>Puestos técnicos sin cubrir, ingenieros nuevos sin formación y una estructura que no crece con la planta.</p>
+      </article>
+    </div>
   </div>
-</div></section>
+</section>
 
-<section id="video"><div class="wrap">
-  <div class="shead"><span class="num">05</span><h2>Video</h2></div>
-  <p class="lede">El video es el formato mejor calificado por los responsables de marketing
-     en manufactura. AMAPE no tiene planta propia, así que su recorrido de planta
-     es la demostración del proceso.</p>
-  <div class="grid g3">
-    <figure><video data-src="assets/amape-logo-animado.mp4" poster="assets/poster-amape-logo-animado.jpg" muted loop playsinline preload="none"></video>
-      <figcaption><b>Logo animado</b>El sólido naranja aterriza en registro sobre el contorno azul.</figcaption></figure>
-    <figure><video data-src="assets/machinery-assembled-in-manufactu-.mp4" poster="assets/poster-machinery-assembled-in-manufactu-.jpg" muted loop playsinline preload="none"></video>
-      <figcaption><b>Timelapse</b>De huella vacía a línea corriendo.</figcaption></figure>
-    <figure><video data-src="assets/documentary-filming-manufacturin-.mp4" poster="assets/poster-documentary-filming-manufacturin-.jpg" muted loop playsinline preload="none"></video>
-      <figcaption><b>Demo de proceso</b>Etiquetado, izaje, bajada y arranque.</figcaption></figure>
+<section class="servicios-sec" id="servicios">
+  <div class="wrap">
+    <div class="shead">
+      <div class="rv"><span class="num">02 · Servicios</span><h2>Lo que hacemos</h2></div>
+      <p class="lede-s rv">Contrate un servicio, combine varios o pregúntenos por un proyecto a la medida de su planta.</p>
+    </div>
+    <div class="servicios">
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="3" y="14" width="10" height="10"/><rect x="27" y="14" width="10" height="10"/><path d="M15 19h10M21 15l4 4-4 4"/></svg></span><span class="n">01</span><h3>Transferencia de productos y procesos</h3>
+        <p>Trasladamos líneas, equipos y procesos de una planta a otra, y los dejamos produciendo en el sitio nuevo.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M20 4l14 7v18l-14 7-14-7V11z"/><path d="M6 11l14 7 14-7M20 18v18"/></svg></span><span class="n">02</span><h3>Introducción de nuevos productos</h3>
+        <p>Llevamos un producto nuevo a producción: proceso, validación y arranque.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M32 20a12 12 0 1 1-4-9"/><path d="M29 4v7h-7"/><path d="M15 21l4 4 7-8"/></svg></span><span class="n">03</span><h3>Proyectos de mejora continua</h3>
+        <p>Reducimos desperdicio, retrabajo y tiempos muertos en la operación que ya tiene.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M5 6v28h30"/><rect x="10" y="10" width="12" height="4"/><rect x="16" y="18" width="12" height="4"/><rect x="22" y="26" width="10" height="4"/></svg></span><span class="n">04</span><h3>Administración de proyectos</h3>
+        <p>Planeación, seguimiento y control de costos, tiempos y riesgos, de principio a fin.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><circle cx="16" cy="13" r="6"/><path d="M5 34c0-7 5-11 11-11s11 4 11 11"/><path d="M27 18l3 3 6-7"/></svg></span><span class="n">05</span><h3>Selección de personal</h3>
+        <p>Reclutamos y evaluamos perfiles técnicos y de ingeniería para su operación.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M20 4l13 5v10c0 9-6 15-13 17-7-2-13-8-13-17V9z"/><path d="M14 20l4 4 8-9"/></svg></span><span class="n">06</span><h3>Preparación para certificaciones ISO</h3>
+        <p>Documentación, auditorías internas y acompañamiento hasta la auditoría de certificación.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="15" y="4" width="10" height="8"/><rect x="4" y="28" width="10" height="8"/><rect x="26" y="28" width="10" height="8"/><path d="M20 12v8M9 28v-8h22v8"/></svg></span><span class="n">07</span><h3>Desarrollo organizacional</h3>
+        <p>Estructura, roles y cultura para que la organización crezca al ritmo de la planta.</p></article>
+      <article class="serv rv"><span class="serv-ico" aria-hidden="true"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><rect x="5" y="6" width="30" height="20"/><path d="M12 34l8-8 8 8M12 14h10M12 19h16"/></svg></span><span class="n">08</span><h3>Entrenamiento a nuevos ingenieros</h3>
+        <p>Formación práctica en piso para ingenieros que se integran a manufactura.</p></article>
+    </div>
+    <div class="serv-mas rv">
+      <p><b>¿Busca algo que no está en la lista?</b> Muchos proyectos combinan servicios o nacen de un reto específico de su planta. Pregúntenos.</p>
+      <a class="btn-sec" href="https://wa.me/526568229302?text=Hola%2C%20quisiera%20saber%20si%20pueden%20ayudarnos%20con%20un%20proyecto%20en%20nuestra%20planta." target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Preguntar por WhatsApp</a>
+    </div>
   </div>
-  <div class="grid g3" style="margin-top:28px">
-    <figure><video data-src="assets/technician-walking-in-manufactur-.mp4" poster="assets/poster-technician-walking-in-manufactur-.jpg" muted loop playsinline preload="none"></video>
-      <figcaption><b>Vertical</b>Formato 9:16 para LinkedIn.</figcaption></figure>
+</section>
+
+<section class="galeria" aria-label="Trabajo en piso">
+  <div class="gal">
+    <figure>
+      <img src="assets/celda-automotriz.jpg" alt="Ingeniero revisando una celda robótica en una línea automotriz" loading="lazy">
+      <div class="gal-titulo"><span class="num">En piso</span><h2>Donde se mueve la manufactura</h2></div>
+      <figcaption>Celdas automatizadas</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/ensamble-medico.jpg" alt="Ingeniero con tablet revisando una línea de ensamble de dispositivos médicos" loading="lazy" style="object-position:70% 50%">
+      <figcaption>Ensamble de dispositivos médicos</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/arranque-linea.jpg" alt="Dos ingenieros revisando con checklist una línea recién instalada" loading="lazy" style="object-position:62% 50%">
+      <figcaption>Arranque de línea nueva</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/equipo-en-planta.jpg" alt="Equipo de ingenieros revisando un proceso junto a una línea" loading="lazy" style="object-position:38% 50%">
+      <figcaption>Revisión de proceso en piso</figcaption>
+    </figure>
+    <figure>
+      <video data-src="assets/equipo-en-piso.mp4" poster="assets/equipo-en-piso.jpg" muted loop playsinline preload="none" aria-hidden="true"></video>
+      <figcaption>Traslado de equipo</figcaption>
+    </figure>
+    <figure>
+      <img src="assets/linea-pasillo.jpg" alt="Técnico caminando por el pasillo de una línea de producción en operación" loading="lazy">
+      <figcaption>Línea en operación</figcaption>
+    </figure>
   </div>
+</section>
 
+<section id="proceso">
+  <div class="wrap">
+    <div class="shead">
+      <div class="rv"><span class="num">03 · Proceso</span><h2>Cómo trabajamos</h2></div>
+      <p class="lede-s rv">Sea una transferencia, una certificación o un proyecto de mejora, cada servicio sigue la misma ruta: Servicio, Proyecto y Entrega.</p>
+    </div>
+    <div class="proceso">
+      <div class="fase rv" style="--span:2">
+        <div class="fase-head"><b>Servicio</b><span>Entender</span></div>
+        <div class="paso"><span class="k">01</span><h3>Diagnóstico</h3><p>Visitamos la planta y entendemos su operación y lo que necesita resolver.</p></div>
+        <div class="paso"><span class="k">02</span><h3>Propuesta</h3><p>Definimos alcance, fases, fechas, responsables y riesgos.</p></div>
+      </div>
+      <div class="fase rv" style="--span:3">
+        <div class="fase-head"><b>Proyecto</b><span>Ejecutar</span></div>
+        <div class="paso"><span class="k">03</span><h3>Ejecución</h3><p>Trabajamos en piso con el equipo y los aliados adecuados para cada fase.</p></div>
+        <div class="paso"><span class="k">04</span><h3>Seguimiento</h3><p>Reportamos avance, costos y riesgos para decidir a tiempo.</p></div>
+        <div class="paso"><span class="k">05</span><h3>Capacitación</h3><p>Preparamos a su personal para sostener lo que se implementa.</p></div>
+      </div>
+      <div class="fase rv" style="--span:1">
+        <div class="fase-head"><b>Entrega</b></div>
+        <div class="paso"><span class="k">06</span><h3>Cierre</h3><p>Entregamos resultados documentados y la operación funcionando.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<div class="llamado">
+  <div class="linea-wm linea-wm--claro" data-linea aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="rv">¿Tiene un proyecto en su planta?</h2>
+    <div class="acciones rv">
+      <a class="btn" href="https://wa.me/526568229302?text=Hola%2C%20tengo%20un%20proyecto%20en%20mi%20planta%20y%20me%20gustar%C3%ADa%20platicarlo." target="_blank" rel="noopener">
+        <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp</a>
+      <a class="btn-sec" href="tel:+526568229302"><svg class="ico" aria-hidden="true"><use href="#i-tel"/></svg>656 822 9302</a>
+    </div>
+  </div>
+</div>
 
-<div class="cierre"><div class="wrap">
-  <h2>Transferimos líneas completas</h2>
-  <hr class="rule">
-  <p>De Estados Unidos a México, ejecutado desde Ciudad Juárez.</p>
-</div></div>
+<section class="enfoque" id="enfoque">
+  <div class="wrap">
+    <div class="shead">
+      <div class="rv"><span class="num">04 · Enfoque</span><h2>Crecer, mejorar, cumplir</h2></div>
+      <p class="lede-s rv">Todo lo que hacemos apunta a tres resultados para su planta.</p>
+    </div>
+    <div class="ejes">
+      <div class="eje rv"><span class="paso-n">01</span><h3>Crecimiento</h3>
+        <p class="eje-desc">Para crecer sin perder el control de costos, tiempos y riesgos.</p>
+        <ul><li>Transferencia de productos y procesos</li><li>Introducción de nuevos productos</li><li>Administración de proyectos</li></ul></div>
+      <div class="eje rv"><span class="paso-n">02</span><h3>Mejora</h3>
+        <p class="eje-desc">Para producir mejor y recuperar la inversión.</p>
+        <ul><li>Proyectos de mejora continua</li><li>Entrenamiento a nuevos ingenieros</li><li>Desarrollo organizacional</li></ul></div>
+      <div class="eje rv"><span class="paso-n">03</span><h3>Calidad</h3>
+        <p class="eje-desc">Para cumplir regulaciones con la gente y los sistemas correctos.</p>
+        <ul><li>Preparación para certificaciones ISO</li><li>Selección de personal</li></ul></div>
+    </div>
+  </div>
+</section>
 
-<footer><div class="wrap">
-  <span>AMAPE — Sistema de identidad</span>
-  <span>Ciudad Juárez, Chihuahua · 2026</span>
-</div></footer>
+<section class="nosotros" id="nosotros">
+  <div class="wrap nos-grid">
+    <div class="nos-texto">
+      <div class="rv"><span class="num">05 · Nosotros</span><h2>Quiénes somos</h2></div>
+      <p class="rv" style="margin-top:32px">AMAPE, Asesores en Manufactura Avanzada y Proyectos Especiales, es una consultoría con base en Ciudad Juárez, Chihuahua.</p>
+      <p class="rv">Nuestro equipo reúne más de 30 años de experiencia en manufactura y trabaja a través de alianzas estratégicas con consultorías especializadas.</p>
+      <div class="industrias rv">
+        <span class="eyebrow">Plantas de manufactura</span>
+        <ul><li>Automotriz</li><li>Dispositivos médicos</li><li>Electrónica</li></ul>
+      </div>
+    </div>
+    <div>
+      <figure class="mision rv">
+        <span class="eyebrow">Misión</span>
+        <blockquote>Consultoría y ejecución de proyectos a través de alianzas estratégicas.</blockquote>
+      </figure>
+      <div class="valores">
+        <div class="valor rv"><b>Respeto</b><span>Por su operación, su gente y sus tiempos.</span></div>
+        <div class="valor rv"><b>Confianza</b><span>Compromisos claros y cumplidos.</span></div>
+        <div class="valor rv"><b>Profesionalismo</b><span>Método, documentación y resultados.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas">
+  <div class="wrap faq-grid">
+    <div class="rv">
+      <span class="num">06 · Preguntas</span><h2>Preguntas frecuentes</h2>
+      <p class="lede-s">¿No encuentra su respuesta? Escríbanos y le contestamos directamente.</p>
+    </div>
+    <div class="faq rv">
+      <details><summary>¿Trabajan solo en Ciudad Juárez?</summary>
+        <p>Nuestra base está en Ciudad Juárez, Chihuahua, y damos servicio en todo el país.</p></details>
+      <details><summary>¿Cuánto dura un proyecto?</summary>
+        <p>Depende del servicio y del alcance. En la propuesta definimos fases y fechas concretas antes de empezar.</p></details>
+      <details><summary>¿Cómo cotizan un proyecto?</summary>
+        <p>Primero conocemos su requerimiento, de preferencia con una visita a planta. Con eso proponemos alcance, fases y tiempos, y la cotización corresponde a ese alcance.</p></details>
+      <details><summary>¿Puedo contratar un solo servicio?</summary>
+        <p>Sí. Puede contratar un servicio específico, como preparación para ISO o selección de personal, o combinar varios en un mismo proyecto.</p></details>
+      <details><summary>¿Atienden proyectos que no aparecen en su lista?</summary>
+        <p>Sí. Cuéntenos su reto: si está dentro de nuestra experiencia o de la de nuestros aliados, le proponemos cómo abordarlo.</p></details>
+      <details><summary>¿Qué necesito para empezar?</summary>
+        <p>Una persona de contacto en planta y una descripción general del producto o proceso. Con eso agendamos una primera conversación sin compromiso.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contacto" id="contacto">
+  <div class="wrap contacto-grid">
+    <div>
+      <div class="rv"><span class="num">07 · Contacto</span><h2>Cuéntenos qué necesita su planta</h2></div>
+      <div class="datos rv" id="datos">
+        <div><span class="eyebrow">WhatsApp</span><a href="https://wa.me/526568229302" target="_blank" rel="noopener">+52 656 822 9302</a></div>
+        <div><span class="eyebrow">Teléfono</span><a href="tel:+526568229302">+52 656 822 9302</a></div>
+        <div><span class="eyebrow">Ubicación</span><p>Ciudad Juárez, Chihuahua</p></div>
+      </div>
+    </div>
+    <form id="form-contacto" class="rv" novalidate>
+      <div class="campo"><label for="f-nombre">Nombre</label><input id="f-nombre" name="nombre" autocomplete="name" required></div>
+      <div class="campo"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" autocomplete="organization" required></div>
+      <div class="campo"><label for="f-correo">Correo</label><input id="f-correo" name="correo" type="email" autocomplete="email" required></div>
+      <div class="campo"><label for="f-tel">Teléfono</label><input id="f-tel" name="telefono" type="tel" autocomplete="tel"></div>
+      <div class="campo full"><label for="f-servicio">Servicio de interés</label>
+        <select id="f-servicio" name="servicio">
+          <option>Transferencia de productos y procesos</option>
+          <option>Introducción de nuevos productos</option>
+          <option>Proyectos de mejora continua</option>
+          <option>Administración de proyectos</option>
+          <option>Selección de personal</option>
+          <option>Preparación para certificaciones ISO</option>
+          <option>Desarrollo organizacional</option>
+          <option>Entrenamiento a nuevos ingenieros</option>
+          <option>Otro</option>
+        </select></div>
+      <div class="campo full"><label for="f-msg">Mensaje</label><textarea id="f-msg" name="mensaje" required></textarea></div>
+      <div class="form-pie">
+        <button class="btn" type="submit" id="f-enviar">Enviar mensaje</button>
+        <p class="estado" id="estado" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <a class="brand" href="#inicio" aria-label="AMAPE, volver al inicio">
+        <img src="assets/amape-isotipo-96.png" width="40" height="30" alt=""><span>AMAPE</span>
+      </a>
+      <p class="pie-desc">Asesores en Manufactura Avanzada y Proyectos Especiales</p>
+    </div>
+    <p class="pie-der">Ciudad Juárez, Chihuahua, México · <a href="tel:+526568229302">+52 656 822 9302</a><br>© <span id="anio"></span> AMAPE</p>
+  </div>
+</footer>
+
+<a class="wa-float" id="wa-float" href="https://wa.me/526568229302?text=Hola%2C%20me%20interesa%20informaci%C3%B3n%20sobre%20los%20servicios%20de%20AMAPE." target="_blank" rel="noopener" aria-label="Escribir a AMAPE por WhatsApp">
+  <svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>WhatsApp
+</a>
 
 <script>
-/* Los videos solo se descargan y corren cuando entran en pantalla.
-   Asi la pagina abre ligera en telefono con datos. */
+/* ============================================================
+   CONTACTO
+   El teléfono y WhatsApp están escritos directo en el HTML
+   (buscar 6568229302 para cambiarlos).
+   correo: si se llena, el formulario abre un correo;
+           si se deja vacío, el formulario manda el mensaje por WhatsApp.
+   ============================================================ */
+var CONTACTO = {
+  correo:   '',
+  whatsapp: '526568229302'
+};
+
+document.getElementById('anio').textContent = new Date().getFullYear();
+
 (function(){
-  var vids = document.querySelectorAll('video[data-src]');
-  if(!('IntersectionObserver' in window)){
-    vids.forEach(function(v){ v.src = v.dataset.src; v.play().catch(function(){}); });
-    return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Marca de agua: línea de producción animada, pausada fuera de pantalla */
+  var tpl = document.getElementById('tpl-linea');
+  document.querySelectorAll('[data-linea]').forEach(function(el){
+    el.appendChild(tpl.content.cloneNode(true));
+  });
+  if('IntersectionObserver' in window){
+    var lo = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        var s = en.target.querySelector('.lp');
+        if(s) s.classList.toggle('lp-pausa', !en.isIntersecting);
+      });
+    }, {rootMargin:'100px 0px'});
+    document.querySelectorAll('[data-linea]').forEach(function(el){ lo.observe(el); });
+    var ro = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ en.target.classList.toggle('anim-pausa', !en.isIntersecting); });
+    }, {rootMargin:'100px 0px'});
+    document.querySelectorAll('.retos-sec').forEach(function(el){ ro.observe(el); });
   }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      var v = e.target;
-      if(e.isIntersecting){
-        if(!v.src){ v.src = v.dataset.src; }
+
+  /* Encabezado con línea al hacer scroll, y botón flotante de WhatsApp después del hero */
+  var top = document.getElementById('top'), wa = document.getElementById('wa-float');
+  var hero = document.querySelector('.hero');
+  function onScroll(){
+    top.classList.toggle('scrolled', window.scrollY > 8);
+    wa.classList.toggle('on', window.scrollY > hero.offsetHeight * 0.6);
+  }
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* Menú móvil */
+  var btn = document.querySelector('.menu-btn'), nav = document.getElementById('nav');
+  btn.addEventListener('click', function(){
+    var open = btn.getAttribute('aria-expanded') !== 'true';
+    btn.setAttribute('aria-expanded', open); nav.classList.toggle('open', open);
+    btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.closest('a')){ btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); }
+  });
+
+  /* Correo visible solo si existe */
+  if(CONTACTO.correo){
+    var d = document.createElement('div');
+    d.innerHTML = '<span class="eyebrow">Correo</span><a></a>';
+    d.lastChild.textContent = CONTACTO.correo; d.lastChild.href = 'mailto:' + CONTACTO.correo;
+    var datos = document.getElementById('datos'); datos.insertBefore(d, datos.lastElementChild);
+  }
+
+  /* Formulario: por correo si hay, si no por WhatsApp */
+  var form = document.getElementById('form-contacto'), estado = document.getElementById('estado');
+  var enviar = document.getElementById('f-enviar');
+  if(!CONTACTO.correo && CONTACTO.whatsapp){
+    enviar.innerHTML = '<svg class="ico" aria-hidden="true"><use href="#i-chat"/></svg>Enviar por WhatsApp';
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){
+      estado.textContent = 'Revise los campos: nombre, empresa, correo y mensaje son necesarios.';
+      var bad = form.querySelector(':invalid'); if(bad) bad.focus();
+      return;
+    }
+    var f = form.elements;
+    var cuerpo = 'Nombre: ' + f.nombre.value + '\nEmpresa: ' + f.empresa.value +
+      '\nCorreo: ' + f.correo.value + (f.telefono.value ? '\nTeléfono: ' + f.telefono.value : '') +
+      '\nServicio: ' + f.servicio.value + '\n\n' + f.mensaje.value;
+    if(CONTACTO.correo){
+      window.location.href = 'mailto:' + CONTACTO.correo +
+        '?subject=' + encodeURIComponent('Contacto desde el sitio · ' + f.empresa.value) +
+        '&body=' + encodeURIComponent(cuerpo);
+      estado.textContent = 'Se abrió su programa de correo con el mensaje listo para enviar.';
+    } else {
+      window.open('https://wa.me/' + CONTACTO.whatsapp + '?text=' + encodeURIComponent('Hola, les escribo desde el sitio de AMAPE.\n\n' + cuerpo), '_blank', 'noopener');
+      estado.textContent = 'Se abrió WhatsApp con su mensaje listo para enviar.';
+    }
+  });
+
+  /* Aparición al hacer scroll */
+  var rvs = document.querySelectorAll('.rv');
+  if(reduce || !('IntersectionObserver' in window)){
+    rvs.forEach(function(el){ el.classList.add('in'); }); hero.classList.add('in');
+  } else {
+    requestAnimationFrame(function(){ hero.classList.add('in'); });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:0.08});
+    rvs.forEach(function(el){ io.observe(el); });
+  }
+
+  /* Videos: se descargan y corren solo en pantalla; sin movimiento se queda la foto fija */
+  var vids = document.querySelectorAll('video[data-src]');
+  if(reduce || !('IntersectionObserver' in window)) return;
+  var vo = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      var v = en.target;
+      if(en.isIntersecting){
+        if(!v.src) v.src = v.dataset.src;
         var p = v.play(); if(p) p.catch(function(){});
-      } else if(!v.paused){
-        v.pause();
-      }
+      } else if(!v.paused){ v.pause(); }
     });
-  }, {rootMargin:'150px 0px', threshold:0.25});
-  vids.forEach(function(v){ io.observe(v); });
+  }, {rootMargin:'150px 0px', threshold:0.2});
+  vids.forEach(function(v){ vo.observe(v); });
 })();
 </script>
 </body>
