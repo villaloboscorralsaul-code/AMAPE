@@ -218,6 +218,7 @@ p{margin:0}
 /* Más problemas */
 .mas-retos{margin-top:clamp(40px,5vw,64px);padding:clamp(24px,3.5vw,44px);background:var(--blanco);border:1px solid var(--borde);border-radius:12px;box-shadow:var(--sombra)}
 .mas-retos-t{font:500 12px/1 var(--texto);letter-spacing:.18em;text-transform:uppercase;color:var(--azul)}
+.mas-retos-lead{margin-top:10px;font-size:17px;color:var(--tinta3)}
 .problemas{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));column-gap:36px}
 .problemas li{display:flex;align-items:center;gap:12px;padding:15px 0;border-bottom:1px solid var(--borde);font-size:15.5px;font-weight:500;color:var(--tinta2)}
 .problemas li::before{content:"";flex:none;width:20px;height:20px;border-radius:50%;background:var(--azul-claro) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.6 6.2 5 8.4l4.4-4.9' fill='none' stroke='%2300579B' stroke-width='1.7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/11px no-repeat}
@@ -315,7 +316,8 @@ input:focus,textarea:focus{outline:none;background:var(--blanco);border-color:va
 .pie ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px}
 .pie ul a{text-decoration:none;color:var(--tinta2)}
 .pie ul a:hover{color:var(--azul)}
-.pie-marca{margin:48px 0 0;padding-bottom:14px;text-align:center;font:600 clamp(96px,25vw,380px)/.78 var(--display);letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(0,87,155,.28);user-select:none;pointer-events:none;white-space:nowrap}
+.pie-marca{margin:48px 0 0;padding-bottom:0;text-align:center;font:600 clamp(96px,25vw,380px)/.78 var(--display);letter-spacing:.02em;color:transparent;-webkit-text-stroke:1px rgba(0,87,155,.28);user-select:none;pointer-events:none;white-space:nowrap}
+.pie-lema{margin:0;padding-bottom:14px;text-align:center;font:600 11px/1 var(--texto);letter-spacing:.16em;text-transform:uppercase;color:var(--azul)}
 .pie-legal{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding-block:18px;border-top:1px solid var(--borde);font-size:13px;color:var(--tinta3);background:var(--blanco);position:relative}
 
 /* ---------- WhatsApp flotante ---------- */
