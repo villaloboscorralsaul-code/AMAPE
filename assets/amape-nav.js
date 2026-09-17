@@ -2,6 +2,8 @@
 (function(){
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var hasIO = 'IntersectionObserver' in window;
+  var EN = document.documentElement.lang.indexOf('en') === 0;
+  var TXT = EN ? {abrir:'Open menu', cerrar:'Close menu'} : {abrir:'Abrir menú', cerrar:'Cerrar menú'};
 
   var anio = document.getElementById('anio');
   if(anio) anio.textContent = new Date().getFullYear();
@@ -19,11 +21,11 @@
   btn.addEventListener('click', function(){
     var open = btn.getAttribute('aria-expanded') !== 'true';
     btn.setAttribute('aria-expanded', open); nav.classList.toggle('open', open);
-    btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    btn.setAttribute('aria-label', open ? TXT.cerrar : TXT.abrir);
   });
   nav.addEventListener('click', function(e){
     if(e.target.closest('a') && !e.target.closest('.nav-serv-btn')){
-      btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); btn.setAttribute('aria-label','Abrir menú');
+      btn.setAttribute('aria-expanded','false'); nav.classList.remove('open'); btn.setAttribute('aria-label', TXT.abrir);
     }
   });
 

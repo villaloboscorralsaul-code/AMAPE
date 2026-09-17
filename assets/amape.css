@@ -115,6 +115,7 @@ p{margin:0}
 .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
 .hero .eyebrow::before{content:"";width:28px;height:1px;background:var(--naranja)}
 .hero h1{color:var(--blanco);font-size:clamp(44px,6.6vw,96px);line-height:.92;margin-top:22px;letter-spacing:.005em}
+.hero-razon{margin-top:14px;font:600 12.5px/1.5 var(--texto);letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.62)}
 .hero-lema{margin-top:24px;font:italic 400 clamp(26px,2.7vw,38px)/1.2 var(--serif);color:#E3EDF6}
 .hero-lema .rota{color:#FFB184;height:1.2em;line-height:1.2}
 .hero-lema .rota-w{line-height:1.2}
@@ -453,4 +454,23 @@ html:not(.js) .wa-float{transform:none}
   .mega small{display:none}
   .mega-ico{width:32px;height:32px}
   .mega-pie{display:none}
+}
+
+/* Selector de idioma */
+.top .brand{order:1}
+.top .nav{order:2;margin-left:auto}
+.idioma{order:3;display:inline-flex;align-items:center;gap:2px;margin-left:18px;padding:3px;border:1px solid var(--borde);border-radius:999px;font:600 12px/1 var(--texto);letter-spacing:.06em}
+.idioma a{padding:6px 9px;border-radius:999px;color:var(--tinta3);text-decoration:none;transition:background .2s,color .2s}
+.idioma a[aria-current]{background:var(--azul);color:var(--blanco)}
+.idioma a:not([aria-current]):hover{color:var(--azul)}
+@media (max-width:1240px){ .nav{gap:20px} }
+@media (max-width:1080px){
+  .top .nav{margin-left:0}
+  .idioma{order:2;margin-left:auto;margin-right:4px}
+  .menu-btn{order:3}
+}
+@media (max-width:600px){
+  .brand small{letter-spacing:.07em;white-space:nowrap}
+  .idioma{margin-right:0}
+  .idioma a{padding:6px 8px}
 }
