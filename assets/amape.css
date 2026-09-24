@@ -476,3 +476,7 @@ html:not(.js) .wa-float{transform:none}
   .idioma{margin-right:0}
   .idioma a{padding:6px 8px}
 }
+/* prefijo "Asesoría en" sobre el nombre del servicio */
+.serv .h3 .pre,.h1-pre{display:block;font-family:var(--texto);font-weight:500;text-transform:none;letter-spacing:.02em;opacity:.7}
+.serv .h3 .pre{font-size:12px;margin-bottom:4px}
+.h1-pre{font-size:clamp(15px,1.4vw,19px);line-height:1.2;margin-bottom:10px}
