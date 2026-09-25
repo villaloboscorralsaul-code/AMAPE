@@ -496,7 +496,7 @@ document.getElementById('anio').textContent = new Date().getFullYear();
     var f = form.elements;
     var texto = 'Hi, I am writing from the AMAPE website.\n\nName: ' + f.nombre.value + '\nCompany: ' + f.empresa.value + '\n\n' + f.mensaje.value;
     location.href = 'mailto:alejandro@amape.mx?subject=' + encodeURIComponent('Inquiry from amape.mx · ' + f.empresa.value) + '&body=' + encodeURIComponent(texto);
-    estado.textContent = 'Your email app opened with the message ready. If it didn't, write to us at alejandro@amape.mx.';
+    estado.textContent = 'Your email app opened with the message ready. If it did not open, write to us at alejandro@amape.mx.';
   });
 
   /* Aparición al hacer scroll (y la línea del proceso) */
